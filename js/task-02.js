@@ -7,8 +7,8 @@ const ingredients = [
     'Herbs',
     'Condiments',
 ];
-const list = document.querySelector('ul#ingredients');
 
+const list = document.querySelector('ul#ingredients');
 let itemPart = new DocumentFragment();
 
 for ( const value of ingredients) { 
@@ -16,6 +16,16 @@ for ( const value of ingredients) {
     item.classList.add('item');
     item.textContent += value;
     itemPart.appendChild(item);
-};
+    };
 
-document.querySelector('ul#ingredients').append(itemPart);
+    document.querySelector('ul#ingredients').append(itemPart);
+
+
+
+
+
+
+
+
+
+
