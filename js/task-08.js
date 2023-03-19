@@ -1,19 +1,19 @@
+
 const form = document.querySelector(".login-form");
 
-const loginFormSubmitHeandler = (event) => {
-  event.preventDefault();
-  const email = event.currentTarget.elements.email.value;
-  const password = event.currentTarget.elements.password.value;
+const loginFormSubmitHeandler = (e) => {
+  e.preventDefault();
+  const email = e.currentTarget.elements.email.value;
+  const password = e.currentTarget.elements.password.value;
   const formData = {
     email,
     password,
   };
-  if (email === "" || password === ""){
-    return alert ("Заповніть форму"); 
+  if(email === "" || password === ""){
+    return alert("Заповніть строку");
   }
-    console.log(formData);
-
-    event.currentTarget.reset();
-    
+  console.log(formData);
+  e.currentTarget.reset();
 };
-form.addEventListener("submit", loginFormSubmitHeandler);
+
+form.addEventListener('submit', loginFormSubmitHeandler);

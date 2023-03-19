@@ -8,21 +8,20 @@ const ingredients = [
     'Condiments',
 ];
 
+
 const list = document.querySelector('ul#ingredients');
 let itemPart = new DocumentFragment();
-
-for ( const value of ingredients) { 
+for (const value of ingredients) {
     const item = document.createElement('li');
-    item.classList.add('item');
     item.textContent += value;
+    item.classList.add('item');
     itemPart.appendChild(item);
-    };
 
-    document.querySelector('ul#ingredients').append(itemPart);
+}
 
+document.querySelector('ul#ingredients').append(itemPart);
 
-
-
+//
 
 
 
